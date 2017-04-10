@@ -150,7 +150,7 @@ I believe that I can use their architecture to add in ANPs of our interests (rac
 
 ## Sentibank
 
-Sentibank is a research project that aims to present a novel approach towards sentiment analysis based on the semantic understanding of visual content. To reseach this goal, we automatically construct a large-scale ontology of semantic concepts, each selected based on the following criteria: (1) reflect a strong sentiment, (2) have a link to an emotion, (3) be frequently used and (4) has reasonable detection accuracy.
+Sentibank is a research project that aims to present a novel approach towards sentiment analysis based on the semantic understanding of visual content. 
 
 ### Sentibank software:
 http://www.ee.columbia.edu/ln/dvmm/vso/download/SentiBank_detector/
