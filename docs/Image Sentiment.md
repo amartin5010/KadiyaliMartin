@@ -141,6 +141,30 @@ golden_hair 0.0128849716857
 peaceful_valley 0.0118683930486
 SentiBank time:  1.63800001144
 ```
+5. ![BW Woman Face](bw_woman.jpg)
+```
+> python sentiBank.py ..\..\bw_woman.jpg
+image_number: 1 batch_size: 1 iteration: 1
+extract_nfeatures caffe_sentibank_train_iter_250000 ..\..\bw_woman-test.prototxt fc7,prob ../../bw_woman-features_fc7,../../bw_woman-features_prob 1 CPU
+E0409 21:55:44.141899  8556 extract_nfeatures.cpp:64] Using CPU
+E0409 21:55:45.503545  8556 extract_nfeatures.cpp:134] Extacting Features
+E0409 21:55:45.907618  8556 extract_nfeatures.cpp:196] Extracted features of 1 query images for feature blob fc7
+E0409 21:55:45.908120  8556 extract_nfeatures.cpp:196] Extracted features of 1 query images for feature blob prob
+E0409 21:55:45.946226  8556 extract_nfeatures.cpp:204] Successfully extracted the features!
+ Top 10 Sentiments:
+scary_face 0.0489807799459
+crying_child 0.0484156757593
+empty_eye 0.0427674092352
+strange_eyes 0.0422771796584
+crazy_eyes 0.0384313762188
+funny_face 0.0300417281687
+dark_eyes 0.0283358059824
+beautiful_eyes 0.021601729095
+laughing_eyes 0.0207434948534
+crazy_face 0.0204488709569
+SentiBank time:  2.14199995995
+```
+
 
 As you can see the accuracy of the top 10 ANPs vary based on the random images I selected. They also don't do a great job at identifying gender, attractiveness and age, and don't classify race. However, they do provide a path forward to do so.
 ## Proposed Next Steps
@@ -150,7 +174,7 @@ I believe that I can use their architecture to add in ANPs of our interests (rac
 
 ## Sentibank
 
-Sentibank is a research project that aims to present a novel approach towards sentiment analysis based on the semantic understanding of visual content. 
+Sentibank is a research project that aims to present a novel approach towards sentiment analysis based on the semantic understanding of visual content.
 
 ### Sentibank software:
 http://www.ee.columbia.edu/ln/dvmm/vso/download/SentiBank_detector/
@@ -170,13 +194,17 @@ This driver package is needed to run the DeepSentiBank code since it has the opt
 
 ## Caffe
 Home page: http://caffe.berkeleyvision.org/
+
 Download page: https://github.com/BVLC/caffe
+
 Version used: https://github.com/microsoft/caffe
 
 ### Dependencies
 #### Protobuf - Protoc
 Home page: https://developers.google.com/protocol-buffers/
+
 Download page: http://repo1.maven.org/maven2/com/google/protobuf/protoc/2.6.1/  
+
 Version used:   protoc-2.6.1-windows-x86_64.exe  
 
 #### Microsoft Visual Studio 2013
@@ -200,14 +228,14 @@ Follow the following steps to build the extract_nfeatures.exe binary needed for 
 * Open Microsoft Visual Studio 2013.
 * In Microsoft Visual Studio 2013, open caffe\win-caffe\caffe-master\windows\Caffe.sln.
 * Right click on "Solution 'Caffe' (17 projects)" and click on click on "Manage NuGet Packages for Solution"
-* ![Manage NuGet Packages for Solution](Manage NuGet Packages.jpg)
+  * ![Manage NuGet Packages for Solution](Manage NuGet Packages.jpg)
 * In the pop up windown click "Restore". This will download all the necessary dependencies.
-* ![Manage NuGet Packages for Solution](Manage NuGet Packages Restore.jpg)
+  * ![Manage NuGet Packages for Solution](Manage NuGet Packages Restore.jpg)
 * Once complete click Close
 * Change the Solution Configuration from Debug to Release.
-* * ![Solution Configuration](Solution Configuration.jpg)
+  * ![Solution Configuration](Solution Configuration.jpg)
 * Right click on "Solution 'Caffe' (17 projects)" and click on click on "Build Solution"
-* * ![Build Solution](Build Solution.jpg)
+  * ![Build Solution](Build Solution.jpg)
 * When the build completes you should see the following in the Output window
   * ========== Build: 17 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
 * Copy the extract_nfeatures.exe binary from  \win-caffe\caffe-master\Build\x64\Release to the DeepSentiBank folder
