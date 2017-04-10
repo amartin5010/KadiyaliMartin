@@ -1,6 +1,6 @@
-# Research work for Vrinda
+# Research work for Dr. Vrinda Kadiyali
 <!-- TOC START min:1 max:3 link:true update:true -->
-- [Research work for Vrinda](#research-work-for-vrinda)
+- [Research work for Dr. Vrinda Kadiyali](#research-work-for-dr-vrinda-kadiyali)
 - [Visual Sentiment-Ontology (VSO)](#visual-sentiment-ontology-vso)
   - [How it works](#how-it-works)
   - [What I was able to get working](#what-i-was-able-to-get-working)
