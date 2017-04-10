@@ -144,7 +144,7 @@ SentiBank time:  1.63800001144
 
 As you can see the accuracy of the top 10 ANPs vary based on the random images I selected. They also don't do a great job at identifying gender, attractiveness and age, and don't classify race. However, they do provide a path forward to do so.
 ## Proposed Next Steps
-
+I believe that I can use their architecture to add in ANPs of our interests (race, age, gender, attractiveness) and we can then create detectors for them. These detectors will be used to create our own version of Sentibank that will classify images based on our ANPs of choice. This may involve reaching out to the creators of Sentibank if access to resources and documentation are not readily available.  
 
 # Build and Install Directions
 
