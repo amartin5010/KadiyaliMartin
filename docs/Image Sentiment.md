@@ -228,14 +228,16 @@ Follow the following steps to build the extract_nfeatures.exe binary needed for 
 * Open Microsoft Visual Studio 2013.
 * In Microsoft Visual Studio 2013, open caffe\win-caffe\caffe-master\windows\Caffe.sln.
 * Right click on "Solution 'Caffe' (17 projects)" and click on click on "Manage NuGet Packages for Solution"
-  * ![Manage NuGet Packages for Solution](Manage NuGet Packages.jpg)
+![Manage NuGet Packages for Solution](Manage_NuGet_Packages.jpg)
 * In the pop up windown click "Restore". This will download all the necessary dependencies.
-  * ![Manage NuGet Packages for Solution](Manage NuGet Packages Restore.jpg)
+![Manage NuGet Packages Restore](Manage_NuGet_Packages_Restore.jpg)
 * Once complete click Close
 * Change the Solution Configuration from Debug to Release.
-  * ![Solution Configuration](Solution Configuration.jpg)
+![Solution Configuration](Solution_Configuration.jpg)
 * Right click on "Solution 'Caffe' (17 projects)" and click on click on "Build Solution"
-  * ![Build Solution](Build Solution.jpg)
+![Build Solution](Build_Solution.jpg)
 * When the build completes you should see the following in the Output window
-  * ========== Build: 17 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+```
+========== Build: 17 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+```
 * Copy the extract_nfeatures.exe binary from  \win-caffe\caffe-master\Build\x64\Release to the DeepSentiBank folder
